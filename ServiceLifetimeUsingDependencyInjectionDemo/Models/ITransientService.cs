@@ -8,7 +8,7 @@ namespace ServiceLifetimeUsingDependencyInjectionDemo.Models
  public   interface ITransientService
     {
         Guid GetOperationID();
-
+        
     }
 
   public  interface IScopedService
@@ -18,6 +18,7 @@ namespace ServiceLifetimeUsingDependencyInjectionDemo.Models
     public interface ISingletonService 
     {
         Guid GetOperationID();
+        int GenerateRandomNumber();
 
     }
 }

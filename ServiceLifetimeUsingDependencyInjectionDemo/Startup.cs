@@ -27,9 +27,9 @@ namespace ServiceLifetimeUsingDependencyInjectionDemo
             services.AddControllersWithViews();
             services.AddSingleton<ISingletonService, OperationServices>();
 
-            services.AddTransient<ITransientService, OperationServices>();
+            //services.AddTransient<ITransientService, OperationServices>();
 
-            services.AddScoped<IScopedService, OperationServices>();
+            //services.AddScoped<IScopedService, OperationServices>();
 
 
 
