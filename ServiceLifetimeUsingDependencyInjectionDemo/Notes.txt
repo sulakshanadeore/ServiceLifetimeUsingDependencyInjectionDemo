@@ -1,0 +1,48 @@
+﻿Service Lifetime----- Dependency Injection(DI)
+-------------------------------------------
+
+Injecting the dependency whenever required.
+Loose coupling--- achieved using Interfaces.
+
+DI is a technique to achieve loose coupling between objects and 
+their collaborators or dependencies.
+Mostly classes will declare their dependencies via the constructor
+(Explicit Dependencies Principle), this approach "constructor injection".
+
+
+Startup---Class----> ConfigureServices method
+To implement DI we need to configure a DI container with classes that
+are participating in the DI.
+The DI has to decide whether to return a new instance of the 
+service(classes) or provide an existing instance.
+
+Scope of the object (of Service)
+Instance lifetime  depends on when the dependency is instantiated and
+how long it will live.
+
+Lifetime of service is defined using 3 methods
+1) AddSingleton---AddSingleton()----Singleton lifetime services are created
+the first time they are requested(or when ConfigureServices is run if 
+u specify an instance there) and then every subsequent request will use the 
+same  instance.
+One object for multiple users
+
+2) AddScoped---AddScoped()---- scoped lifetime services are created once per 
+request.
+One object for each/one user
+
+
+3) AddTransient--AddTransient()----Transient lifetime services are created each
+time they are requested. 
+example of stateless service--(http)
+new  reuest--- new object 
+
+
+
+
+
+
+
+
+
+
